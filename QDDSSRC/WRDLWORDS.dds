@@ -1,0 +1,7 @@
+     A                                      UNIQUE
+     A          R WORDREC
+     A            PZLNUM         4P 0
+     A            DBWORD         5A
+     A            HSNAME         9A
+     A            HSGUESS        1P 0
+     A          K PZLNUM
