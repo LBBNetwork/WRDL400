@@ -13,7 +13,8 @@ Source Layout:
 
 
 # To Compile
-This should run on versions of OS/400 as old as V3R7. I have not yet tested though.
+WRDL/400 has been updated to support OS/400 V3R1! (And V3R6 on POWER)
+OS/400 V2 and V1 have not been tested because we simply don't have any working machines or install images for those versions.
 
 Compile the DDS, compile the screen spec, then compile the RPGLE file.
 

@@ -1,8 +1,8 @@
-     A*%%TS  SD  20240530  185541  QSECOFR     
+     A*%%TS  SD  20250428  162657  QSECOFR     REL-V6R1M0  5761-WDS
      A*%%EC
      A                                      DSPSIZ(24 80 *DS3)
      A          R GAME
-     A*%%TS  SD  20240530  185541  QSECOFR    
+     A*%%TS  SD  20240530  185541  QSECOFR     REL-V6R1M0  5761-WDS
      A                                      CF03(03 'Exit')
      A                                      CF05(05 'New Game')
      A                                  1  3'WRDL/400'
@@ -142,7 +142,7 @@
      A                                 16 48'that letter does not appear in'
      A                                 17 48'the puzzle.'
      A          R SELPZL
-     A*%%TS  SD  20240530  181008  QSECOFR     REL-V6R1M0  5761-WDS
+     A*%%TS  SD  20250428  162657  QSECOFR     REL-V6R1M0  5761-WDS
      A                                      CF03(03 'exit')
      A            OUTPZLS        4A  O 19 68
      A                                 23  4'F3 / Cmd+3=Exit'
@@ -150,7 +150,7 @@
      A                                 23 23'ENTER=Begin Game'
      A                                      COLOR(BLU)
      A                                 18 59'PUZZLES TO PLAY:'
-     A                                 19 61'0000 -'
+     A                                 19 61'0001 -'
      A                                 18  4'ENTER A PUZZLE NUMBER TO GET START-
      A                                      ED:'
      A                                  3  9'__      ____________________   ___-
@@ -172,6 +172,8 @@
      A                                 13 38' \____   |  \_____  /\_____  / '
      A                                 14 38'      |__|        \/       \/  '
      A            INPZL          4Y 0I 19 19
+     A                                 16 39'Now compatible with OS/400 V3R1!'
+     A                                      COLOR(RED)
      A          R YOUWIN
      A*%%TS  SD  20240530  144311  QSECOFR     REL-V6R1M0  5761-WDS
      A                                 16  3'The word was:'

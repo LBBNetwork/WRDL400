@@ -45,35 +45,35 @@
      C                   EVAL      GUESSARR(4) = %SUBST (INWORD:4:1)
      C                   EVAL      GUESSARR(5) = %SUBST (INWORD:5:1)
      C
-     C                   EVAL      TEMP = %SCAN(GUESSARR(1):PUZZLE)
+     C     GUESSARR(1)   SCAN      PUZZLE        TEMP
      C     TEMP          IFEQ      0
      C                   MOVEL     FAIL          DSPARR(1)
      C                   ELSE
      C                   MOVEL     WRONG         DSPARR(1)
      C                   ENDIF
      C
-     C                   EVAL      TEMP = %SCAN(GUESSARR(2):PUZZLE)
+     C     GUESSARR(2)   SCAN      PUZZLE        TEMP
      C     TEMP          IFEQ      0
      C                   MOVEL     FAIL          DSPARR(2)
      C                   ELSE
      C                   MOVEL     WRONG         DSPARR(2)
      C                   ENDIF
      C
-     C                   EVAL      TEMP = %SCAN(GUESSARR(3):PUZZLE)
+     C     GUESSARR(3)   SCAN      PUZZLE        TEMP
      C     TEMP          IFEQ      0
      C                   MOVEL     FAIL          DSPARR(3)
      C                   ELSE
      C                   MOVEL     WRONG         DSPARR(3)
      C                   ENDIF
      C
-     C                   EVAL      TEMP = %SCAN(GUESSARR(4):PUZZLE)
+     C     GUESSARR(4)   SCAN      PUZZLE        TEMP
      C     TEMP          IFEQ      0
      C                   MOVEL     FAIL          DSPARR(4)
      C                   ELSE
      C                   MOVEL     WRONG         DSPARR(4)
      C                   ENDIF
      C
-     C                   EVAL      TEMP = %SCAN(GUESSARR(5):PUZZLE)
+     C     GUESSARR(5)   SCAN      PUZZLE        TEMP
      C     TEMP          IFEQ      0
      C                   MOVEL     FAIL          DSPARR(5)
      C                   ELSE
@@ -106,8 +106,9 @@
      C*-----------------------------------------------------------------
      C     CHKVALID      BEGSR
      C     *LOVAL        SETLL     WORDREC
-     C                   DOU       %EOF(WRDLWORDS)
-     C                   READ      WORDREC
+     C                   READ      WORDREC                                70
+     C     *IN70         DOWEQ     *OFF
+     C                   READ      WORDREC                                70
      C                   MOVEL     DBWORD        PZLVALID
      C
      C     INWORD        IFEQ      PZLVALID
@@ -399,9 +400,9 @@
      C     GETALLPZL     BEGSR
      C                   SUB       PZLCOUNT      PZLCOUNT
      C     *LOVAL        SETLL     WORDREC                            90
-     C                   READ      WORDREC
-     C                   DOU       %EOF(WRDLWORDS)
-     C                   READ      WORDREC
+     C                   READ      WORDREC                                71
+     C     *IN71         DOWEQ     *OFF
+     C                   READ      WORDREC                                71
      C                   ADD       1             PZLCOUNT
      C                   ENDDO
      C                   SUB       1             PZLCOUNT
@@ -417,7 +418,7 @@
      C                   MOVEL     PZLCOUNT      OUTPZLS
      C                   EXFMT     SELPZL
      C     INPZL         SETLL     WORDREC
-     C                   READ      WRDLWORDS
+     C                   READ      WRDLWORDS                              72
      C                   EXSR      GAMEGO
      C                   ENDSR
      C*-----------------------------------------------------------------
